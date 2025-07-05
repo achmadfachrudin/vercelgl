@@ -7,6 +7,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   try {
     const executablePath = await chromium.executablePath();
+    console.log("🧠 Chromium executablePath:", executablePath);
 
     const browser = await puppeteer.launch({
       args: chromium.args,
